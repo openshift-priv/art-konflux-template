@@ -1,3 +1,5 @@
+# Docs: https://github.com/konflux-ci/olm-operator-konflux-sample/blob/e0fe58178ff82586cfd004065d0586f016aa6a9a/docs/konflux-onboarding.md#building-artifacts-on-multiple-platforms
+# PR template: https://github.com/konflux-ci/olm-operator-konflux-sample/pull/4
 apiVersion: tekton.dev/v1
 kind: PipelineRun
 metadata:
