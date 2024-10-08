@@ -4,17 +4,16 @@ metadata:
   annotations:
     build.appstudio.openshift.io/repo: https://github.com/openshift-priv/art-konflux-template?rev={{revision}}
     build.appstudio.redhat.com/commit_sha: '{{revision}}'
-    build.appstudio.redhat.com/pull_request_number: '{{pull_request_number}}'
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch
+    pipelinesascode.tekton.dev/on-cel-expression: event == "push" && target_branch
       == "main"
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: art-konflux-template
     appstudio.openshift.io/component: art-konflux-template
     pipelines.appstudio.openshift.io/type: build
-  name: art-konflux-template-on-pull-request
+  name: art-konflux-template-on-push
   namespace: ocp-art-tenant
 spec:
   params:
@@ -23,9 +22,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads/ocp-art-tenant/art-konflux-template/art-konflux-template:on-pr-{{revision}}
-  - name: image-expires-after
-    value: 5d
+    value: quay.io/redhat-user-workloads/ocp-art-tenant/art-konflux-template/art-konflux-template:{{revision}}
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:
