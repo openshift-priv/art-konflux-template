@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: art-store-to-db
+  labels:
+    app.kubernetes.io/version: "0.6"
+  annotations:
+    tekton.dev/pipelines.minVersion: "0.29.0"
+    tekton.dev/displayName: "ART store to DB"
+spec:
+  description: >-
+    ART custom task to store builds to ART's BigQuery database upon completion.
+  steps:
+    - image: 'registry.access.redhat.com/ubi9/ubi:9.4-1214.1726694543'
+      name: run-script
+      script: |
+        #!/usr/bin/env bash
+        
+        echo "Test custom task"
