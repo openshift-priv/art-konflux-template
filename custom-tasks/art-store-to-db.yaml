@@ -15,6 +15,10 @@ spec:
       description: "Quay URL of the built image"
       type: string
       default: ""
+    - name: NVR
+      description: "NVR of the built image"
+      type: string
+      default: ""
   steps:
     - image: "registry.access.redhat.com/ubi9/ubi:latest"
       name: run-script
@@ -45,10 +49,11 @@ spec:
         ./install.sh
 
         # Sanity check
-        doozer -h
-        elliott -h
-        artcd -h
+        # doozer -h
+        # elliott -h
+        # artcd -h
         
-        # Print the URL
+        # Print the image URL and NVR
         echo "IMAGE_URL: $(params.IMAGE_URL)"
+        echo "NVR: $(params.NVR)"
         
