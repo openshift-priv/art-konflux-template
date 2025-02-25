@@ -238,7 +238,7 @@ spec:
         - name: name
           value: buildah-remote-oci-ta
         - name: bundle
-          value: quay.io/arewm/buildah-remote-oci-ta:docker-manifest-support@sha256:2331f7b7949c49ee7e746cc1560fd0515fd4b353bbb139f55d8df6c8912520a2
+          value: quay.io/arewm/buildah-remote-oci-ta:docker-manifest-support@sha256:ff4fc12e366fe2db842e130e23e7674ef43cad6cf2e7c337ba01ccfe4f355e0a
         - name: kind
           value: task
         resolver: bundles
@@ -269,7 +269,7 @@ spec:
         - name: name
           value: build-image-index
         - name: bundle
-          value: quay.io/arewm/build-image-index:docker-manifest-support@sha256:43f2021981f31e85b29d096c1d9312daffb9e673bb01f7466b65785a9479d09f
+          value: quay.io/arewm/build-image-index:docker-manifest-support@sha256:0aaf06696bd9a7f0d49e56cd4df136938e9b0e17bd0619bb0dcc463b5763aef1
         - name: kind
           value: task
         resolver: bundles
