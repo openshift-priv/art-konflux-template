@@ -229,6 +229,8 @@ spec:
         value: $(tasks.prefetch-dependencies.results.CACHI2_ARTIFACT)
       - name: IMAGE_APPEND_PLATFORM
         value: "true"
+      - name: BUILDAH_FORMAT
+        value: docker
       runAfter:
       - prefetch-dependencies
       taskRef:
