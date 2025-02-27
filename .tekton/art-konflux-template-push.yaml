@@ -44,7 +44,7 @@ spec:
         - name: name
           value: show-sbom
         - name: bundle
-          value: quay.io/arewm/show-sbom:docker-manifest-support@sha256:c8d27a248d3bce1338c5161912a69ec15e9623186c31252dbf6f8d6f56adf2bc
+          value: quay.io/konflux-ci/tekton-catalog/task-show-sbom:0.1@sha256:04f15cbce548e1db7770eee3f155ccb2cc0140a6c371dc67e9a34d83673ea0c0
         - name: kind
           value: task
         resolver: bundles
@@ -238,7 +238,7 @@ spec:
         - name: name
           value: buildah-remote-oci-ta
         - name: bundle
-          value: quay.io/arewm/buildah-remote-oci-ta:docker-manifest-support@sha256:ff4fc12e366fe2db842e130e23e7674ef43cad6cf2e7c337ba01ccfe4f355e0a
+          value: quay.io/konflux-ci/tekton-catalog/task-buildah-remote-oci-ta:0.4@sha256:3e01d3870212cfa0a5f947abcd74348adb80591a2f0828c64bb29323dff7225d
         - name: kind
           value: task
         resolver: bundles
@@ -269,7 +269,7 @@ spec:
         - name: name
           value: build-image-index
         - name: bundle
-          value: quay.io/arewm/build-image-index:docker-manifest-support@sha256:0aaf06696bd9a7f0d49e56cd4df136938e9b0e17bd0619bb0dcc463b5763aef1
+          value: quay.io/konflux-ci/tekton-catalog/task-build-image-index:0.1@sha256:24feb32a91fb9960aa0a2d3a982dd549bad2d40074e1e5e3f9ae9739a66174b8
         - name: kind
           value: task
         resolver: bundles
