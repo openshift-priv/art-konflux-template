@@ -1,4 +1,0 @@
-{
-  "description": "Renovate will create Pull Requests at any time of any day, as needed. Ref docs:  https://docs.renovatebot.com/configuration-options/#schedule",
-  "schedule": ["at any time"]
-}
