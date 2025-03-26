@@ -1,0 +1,20 @@
+---
+kind: ImageDigestMirrorSet
+apiVersion: config.openshift.io/v1
+metadata:
+  name: art-images-fbc-staging-index
+  namespace: openshift-marketplace
+spec:
+  imageDigestMirrors:
+    - source: registry.redhat.io/openshift4/ose-pf-status-relay-operator-bundle
+      mirrors:
+        - quay.io/redhat-user-workloads/ocp-art-tenant/art-images
+    - source: registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9
+      mirrors:
+        - quay.io/redhat-user-workloads/ocp-art-tenant/art-images
+    - source: registry.redhat.io/openshift4/pf-status-relay-rhel9-operator
+      mirrors:
+        - quay.io/redhat-user-workloads/ocp-art-tenant/art-images
+    - source: registry.redhat.io/openshift4/pf-status-relay-rhel9
+      mirrors:
+        - quay.io/redhat-user-workloads/ocp-art-tenant/art-images
