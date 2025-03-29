@@ -226,6 +226,8 @@ spec:
         value: "true"
       - name: BUILDAH_FORMAT
         value: docker
+      - name: SQUASH
+        value: true
       runAfter:
       - prefetch-dependencies
       taskRef:
