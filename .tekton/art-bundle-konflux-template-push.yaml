@@ -367,8 +367,10 @@ spec:
         params:
         - name: name
           value: sast-snyk-check-oci-ta
+        - name: image-digest
+          value: $(tasks.build-image-index.results.IMAGE_DIGEST)
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-sast-snyk-check-oci-ta:0.3@sha256:a1cb59ed66a7be1949c9720660efb0a006e95ef05b3f67929dd8e310e1d7baef
+          value: quay.io/konflux-ci/tekton-catalog/task-sast-snyk-check-oci-ta:0.4@sha256:89aead32dc21404e4e0913be9668bdd2eea795db3e4caa762fb619044e479cb8
         - name: kind
           value: task
         resolver: bundles
@@ -432,8 +434,10 @@ spec:
         params:
         - name: name
           value: sast-coverity-check-oci-ta
+        - name: image-digest
+          value: $(tasks.build-image-index.results.IMAGE_DIGEST)
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-sast-coverity-check-oci-ta:0.2@sha256:07cb09253da53235f83d1a2327faebb8505091c509fc1e3af12a43cfe34f63a6
+          value: quay.io/konflux-ci/tekton-catalog/task-sast-coverity-check-oci-ta:0.3@sha256:d5e2a69c80a67a14d4bc92dff12b8aa24e68f79996eae23311b774dee978f30f
         - name: kind
           value: task
         resolver: bundles
@@ -503,8 +507,10 @@ spec:
         params:
         - name: name
           value: sast-unicode-check-oci-ta
+        - name: image-digest
+          value: $(tasks.build-image-index.results.IMAGE_DIGEST)
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-sast-unicode-check-oci-ta:0.1@sha256:424f2f659c02998dc3a43e1ce869e3148982c59adb74f953f8fa91ff1c9ab86e
+          value: quay.io/konflux-ci/tekton-catalog/task-sast-unicode-check-oci-ta:0.2@sha256:df185dbe4e2852668f9c46f938dd752e90ea9c79696363378435a6499596c319
         - name: kind
           value: task
         resolver: bundles
