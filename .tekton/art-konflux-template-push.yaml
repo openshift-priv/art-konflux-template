@@ -233,7 +233,7 @@ spec:
         - name: name
           value: buildah-remote-oci-ta
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-buildah-remote-oci-ta:0.4@sha256:252e5c94fb2375c43bdfd4b65097d246f4f37392956b08e5c38f366623a0b9ce
+          value: quay.io/mshaposhnik/tekton-catalog/buildah-remote-oci-ta:rsyncfixed@sha256:349ec5edbf8745ba0f47759eac3adbfa7929fe01b617090e05bf1fb7c83949db
         - name: kind
           value: task
         resolver: bundles
