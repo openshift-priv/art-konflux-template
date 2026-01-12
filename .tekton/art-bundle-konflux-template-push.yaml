@@ -321,7 +321,7 @@ spec:
         operator: in
         values:
         - 'false'
-    - name: clair-scan
+    - name: rox-scan
       params:
       - name: image-digest
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
@@ -332,12 +332,13 @@ spec:
       taskRef:
         params:
         - name: name
-          value: clair-scan
+          value: roxctl-scan
         - name: bundle
-          value: quay.io/konflux-ci/tekton-catalog/task-clair-scan:0.3@sha256:654b989d7cdc03d082e56f216a29de04847215ee379a8d9ca315e453ad2b15c2
+          value: quay.io/konflux-ci/tekton-catalog/task-roxctl-scan:0.1@sha256:c529094bdcd956182b56f74aa1a841d31663f3f353b28fdb6196c0c04f1ac42e
         - name: kind
           value: task
         resolver: bundles
+      timeout: 20m
       when:
       - input: $(params.skip-checks)
         operator: in
