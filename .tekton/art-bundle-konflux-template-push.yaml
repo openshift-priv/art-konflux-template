@@ -224,7 +224,6 @@ spec:
           value: buildah-oci-ta
         - name: bundle
           value: quay.io/konflux-ci/tekton-catalog/task-buildah-oci-ta:0.9@sha256:e6273011f68af3881b3c9e1b06d50a7177b221b1d56f7432755b1b606a5557bc
-        - name:  
           value: task
         resolver: bundles
     - name: build-image-index
