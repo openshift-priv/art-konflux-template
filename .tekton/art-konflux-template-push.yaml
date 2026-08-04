@@ -319,12 +319,7 @@ spec:
         operator: in
         values:
         - 'false'
-    - matrix:
-        params:
-        - name: image-platform
-          value:
-          - $(params.build-platforms)
-      name: rox-scan
+    - name: rox-scan
       params:
       - name: image-digest
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
