@@ -93,7 +93,7 @@ spec:
       type: string
       description: The format for the resulting image's mediaType. Valid values are oci or docker.
     - name: enable-cache-proxy
-      default: 'false'
+      default: 'true'
       description: Enable cache proxy configuration
       type: string
     - name: sast-target-dirs
@@ -230,6 +230,10 @@ spec:
         value: $(params.rewrite-timestamp)
       - name: OMIT_HISTORY
         value: $(params.omit-history)
+      - name: HTTP_PROXY
+        value: $(tasks.init.results.http-proxy)
+      - name: NO_PROXY
+        value: $(tasks.init.results.no-proxy)
       runAfter:
       - prefetch-dependencies
       taskRef:
