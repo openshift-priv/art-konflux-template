@@ -518,11 +518,13 @@ spec:
     serviceAccountName: build-pipeline-art-konflux-template
   taskRunSpecs:
   - pipelineTaskName: rpms-signature-scan
-    computeResources:
-      requests:
-        memory: 512Mi
-      limits:
-        memory: 512Mi
+    stepSpecs:
+    - name: rpms-signature-scan
+      computeResources:
+        requests:
+          memory: 512Mi
+        limits:
+          memory: 512Mi
   workspaces:
   - name: git-auth
     secret:
