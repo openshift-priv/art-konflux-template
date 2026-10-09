@@ -1,3 +1,3 @@
-FROM registry.access.redhat.com/ubi9/ubi:9.6-1749542372
+FROM registry.access.redhat.com/ubi9/ubi:9.8-1791269371
 
 # Do nothing
